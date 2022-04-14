@@ -159,17 +159,13 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(list, name){
-  for (let i = 0; i < list.length;) {
-    if (list[i] == name) {
-      list.splice(i);
-      return list;
-    } else {
-      i++;
-    }
-    return list;
-  } 
+  for (let i = 0; i < list.length; i++) {
+  if(list[i] == name) {
+    list.splice(i,1);
+  }
+} return list;
 }
-removeFlavorByName(originalFlavors, "Rocky Road");
+console.log (removeFlavorByName(originalFlavors, "Vanilla"));
 
 
 
