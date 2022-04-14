@@ -46,9 +46,12 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(list){
+  const newCopy = list.slice();
+  console.log (newCopy);
+  return newCopy;
 }
+copy(originalFlavors);
 
 
 
@@ -63,9 +66,21 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
+function is31Flavors(list){
+  for(let i = 0; i < list.length; i++) {
+    let flavorNumber= list.length;
+    if (flavorNumber == 31) {
+      let answer = true;
+      console.log(answer);
+      return answer;
+    } else {
+      let answer = false;
+      console.log(answer);
+      return answer;
+    }
  }
+}
+is31Flavors(originalFlavors)
 
 
 
@@ -82,11 +97,13 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(list){
+  list.unshift ("Rainbow Sherbert");
+  console.log (list);
+  return list;
  }
 
-
+addFlavor(originalFlavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -100,10 +117,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(list){
+ list.pop();
+ console.log(list);
+ return list;
 }
-
+removeLastFlavor(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -118,10 +137,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
-}
-
+function getFlavorByIndex(list, num){
+       let answer = list[num];
+       return answer;
+     }
+getFlavorByIndex(originalFlavors, 5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -138,9 +158,18 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(list, name){
+  for (let i = 0; i < list.length;) {
+    if (list[i] == name) {
+      list.splice(i);
+      return list;
+    } else {
+      i++;
+    }
+    return list;
+  } 
 }
+removeFlavorByName(originalFlavors, "Rocky Road");
 
 
 
