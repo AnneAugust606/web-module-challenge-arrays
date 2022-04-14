@@ -188,10 +188,17 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
-}
+function filterByWord(list, flavor){
+let filteredList = [];
+ for (let i = 0; i < list.length; i++) {
+   if (list[i].includes (flavor)) {
+     filteredList.push(list[i]);
+   }
+ }
+ return filteredList;
 
+}
+console.log(filterByWord(originalFlavors,'Chocolate'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
